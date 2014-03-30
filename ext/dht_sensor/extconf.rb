@@ -33,12 +33,13 @@ LIB_DIRS = [
   # Finally fall back to /usr
   '/usr/lib',
 ]
+
 unless find_header('bcm2835.h')
-  abort 'bcm2835 is missing'
+  abort 'bcm2835 is missing, for production you will need to install http://www.airspayce.com/mikem/bcm2835/'
 end
 
 unless have_library('bcm2835') && append_library($libs, 'bcm2835')
-  abort "Can't Appended Library bcm2835!"
+  abort "Can't Appended Library bcm2835! for production you will need to install http://www.airspayce.com/mikem/bcm2835/"
 end
 
 dir_config('bcm2835', HEADER_DIRS, LIB_DIRS)

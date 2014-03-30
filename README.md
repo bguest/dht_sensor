@@ -16,6 +16,10 @@ Or install it yourself as:
 
     $ gem install dht_sensor
 
+### Dependencies
+
+* http://www.airspayce.com/mikem/bcm2835/
+
 ## Usage
 
 TODO: Write usage instructions here
